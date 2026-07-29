@@ -1,0 +1,61 @@
+:root {
+  color-scheme: light dark;
+}
+body {
+  font:
+          14px/1.5 system-ui,
+          sans-serif;
+  margin: 0 auto;
+  max-width: 46rem;
+  padding: 2rem 1rem;
+}
+h1 {
+  font-size: 1.25rem;
+}
+p.lede {
+  opacity: 0.75;
+}
+form {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+input {
+  flex: 1;
+  font: inherit;
+  padding: 0.4rem 0.6rem;
+}
+button {
+  font: inherit;
+  padding: 0.4rem 1rem;
+}
+video {
+  background: #000;
+  width: 100%;
+}
+dl {
+  display: grid;
+  gap: 0 1rem;
+  grid-template-columns: max-content 1fr;
+  margin: 1rem 0;
+}
+dt {
+  opacity: 0.6;
+}
+dd {
+  margin: 0;
+  font-family: ui-monospace, monospace;
+}
+#log {
+  background: rgba(127, 127, 127, 0.12);
+  border-radius: 4px;
+  font-family: ui-monospace, monospace;
+  font-size: 12px;
+  height: 14rem;
+  overflow: auto;
+  padding: 0.75rem;
+  white-space: pre-wrap;
+}
+.error {
+  color: #d33;
+}

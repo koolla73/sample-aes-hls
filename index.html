@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple fMP4 SAMPLE-AES player</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <h1>Simple fMP4 SAMPLE-AES player</h1>
+    <p class="lede">
+      A ~700 line reduction of hls.js covering only what is needed to play a
+      fragmented-MP4 HLS stream encrypted with
+      <code>METHOD=SAMPLE-AES</code>: playlist parsing, key loading, in-band
+      sample decryption and MSE buffering. No EME, no transmuxing, no ABR.
+    </p>
+    <p class="lede">
+      Sources are TypeScript; run <code>npm run build:watch</code> (or
+      <code>npm run dev</code>) to compile <code>./dist/player.js</code>
+      before opening this page.
+    </p>
+
+    <form id="form">
+      <input id="url" value="../test/media.m3u8" spellcheck="false" />
+      <button type="submit">Load</button>
+    </form>
+
+    <video id="video" controls playsinline></video>
+
+    <dl>
+      <dt>Tracks</dt>
+      <dd id="tracks">–</dd>
+      <dt>MIME</dt>
+      <dd id="mime">–</dd>
+      <dt>Encryption</dt>
+      <dd id="encryption">–</dd>
+      <dt>Buffered</dt>
+      <dd id="buffered">–</dd>
+    </dl>
+
+    <div id="log"></div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
