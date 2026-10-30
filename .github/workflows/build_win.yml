@@ -19,7 +19,7 @@ jobs:
       - uses: actions/setup-node@v7
 
       - name: Remove test directory
-        run: rmdir /q /s public/test
+        run: rmdir /q /s ${{github.workspace}}\public\test
         
       - name: Install TypeScript
         run: npm install -g typescript
