@@ -18,7 +18,7 @@ jobs:
       - uses: actions/checkout@v7
       
       - name: Build
-        run: npm run build:watch
+        run: npm run dev
 
       - name: List dir
         run: dir /S ${{github.workspace}}
