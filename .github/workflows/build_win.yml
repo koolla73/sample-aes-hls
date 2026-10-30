@@ -16,9 +16,10 @@ jobs:
         shell: cmd
     steps:
       - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
       
       - name: Build
-        run: npm run dev
+        run: npm ci
 
       - name: List dir
         run: dir /S ${{github.workspace}}
