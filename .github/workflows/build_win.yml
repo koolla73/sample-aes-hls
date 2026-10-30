@@ -21,6 +21,7 @@ jobs:
       - name: Build
         run: |
           npm install -g typescript
+          npm install -D vite
           npm run build
 
       - name: List dir
