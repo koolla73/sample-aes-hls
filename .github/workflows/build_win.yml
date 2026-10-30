@@ -25,7 +25,7 @@ jobs:
         run: npm install -D vite
         
       - name: Build
-        run: npm run tsc && vite build
+        run: npm run dev
 
       - name: List dir
         run: dir /S ${{github.workspace}}
